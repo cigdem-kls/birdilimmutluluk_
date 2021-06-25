@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "55131410391",
+    "project_id": "birdilimmutlulukdev",
+    "storage_bucket": "birdilimmutlulukdev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55131410391:android:0fe71cfbb8a12f5e1dc592",
+        "android_client_info": {
+          "package_name": "com.piteknoloji.birdilimmutlulukdev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55131410391-7md6j7hemrvrlj7auv3o2n5mafbldfqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-04VsWmNXvGJoMHhaMPHWH8ud4YSW6HA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55131410391-7md6j7hemrvrlj7auv3o2n5mafbldfqr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
