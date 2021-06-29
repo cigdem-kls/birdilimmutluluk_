@@ -17,20 +17,20 @@ import 'package:flutter/material.dart';
 
 class Search extends SearchDelegate {
   List<String> data = [
-    "HARİKA DONUT TARİFİ",
-    "CAPPUCCİNO CUPCAKE TARİFİ",
-    "ÇATLAK KURABİYE TARİFİ",
-    "KIRMIZI KADİFE KEK",
-    "TEREYAĞLI BROWNİE TARİFİ",
-    "KREM PEYNİR HAVUÇLU KEK",
-    "LİMONLU CHEESECAKE TARİFİ",
-    "MACARON TARİFİ",
-    "MANGOLU PUDİNG TARİFİ",
-    "MEYVELİ RULO KEK",
-    "OREO VANİLYALI DONDURMA",
-    "ORİJİNAL CHEESECAKE TARİFİ",
-    "FLUFFY PANCAKE TARİFİ",
-    "MEYVELİ RULO KEK",
+    "HARIKA DONUT TARIFI",
+    "CAPPUCCINO CUPCAKE TARIFI",
+    "CATLAK KURABIYE TARIFI",
+    "KIRMIZI KADIFE KEK",
+    "TEREYAGLI BROWNIE TARIFI",
+    "KREM PEYNIR HAVUCLU KEK",
+    "LIMONLU CHEESECAKE TARIFI",
+    "MACARON TARIFI",
+    "MANGOLU PUDING TARIFI",
+    "MEYVELI RULO KEK",
+    "OREO VANILYALI DONDURMA",
+    "ORIJINAL CHEESECAKE TARIFI",
+    "FLUFFY PANCAKE TARIFI",
+    "SNICKERDOODLES KURABIYE",
   ];
 
   List<String> recentSearch = [
@@ -64,7 +64,7 @@ class Search extends SearchDelegate {
         title: Text(query),
         onTap: () {},
       );
-    } else if (query == "HARİKA DONUT TARİFİ") {
+    } else if (query == "HARIKA DONUT TARIFI") {
       return ListTile(
         title: Text("HARİKA DONUT TARİFİ"),
         trailing: Icon(
@@ -75,7 +75,7 @@ class Search extends SearchDelegate {
               context, MaterialPageRoute(builder: (context) => Donut2()));
         },
       );
-    } else if (query == "CAPPUCCINO CUPCAKE TARİFİ") {
+    } else if (query == "CAPPUCCINO CUPCAKE TARIFI") {
       return ListTile(
         title: Text("CAPPUCCİNO CUPCAKE TARİFİ"),
         trailing: Icon(
@@ -86,7 +86,7 @@ class Search extends SearchDelegate {
               MaterialPageRoute(builder: (context) => CappuccinoCupcake()));
         },
       );
-    } else if (query == "ÇATLAK KURABİYE TARİFİ") {
+    } else if (query == "CATLAK KURABIYE TARIFI") {
       return ListTile(
         title: Text("ÇATLAK KURABİYE TARİFİ"),
         trailing: Icon(
@@ -97,7 +97,7 @@ class Search extends SearchDelegate {
               MaterialPageRoute(builder: (context) => CatlakCikolata()));
         },
       );
-    } else if (query == "TEREYAĞLI BROWNİE TARİFİ") {
+    } else if (query == "TEREYAGLI BROWNIE TARIFI") {
       return ListTile(
         title: Text("TEREYAĞLI BROWNİE TARİFİ"),
         trailing: Icon(
@@ -108,7 +108,7 @@ class Search extends SearchDelegate {
               context, MaterialPageRoute(builder: (context) => Browni()));
         },
       );
-    } else if (query == "KIRMIZI KADİFE KEK") {
+    } else if (query == "KIRMIZI KADIFE KEK") {
       return ListTile(
         title: Text("KIRMIZI KADİFE KEK"),
         trailing: Icon(
@@ -119,7 +119,7 @@ class Search extends SearchDelegate {
               context, MaterialPageRoute(builder: (context) => KadifeKek()));
         },
       );
-    } else if (query == "KREM PEYNİR HAVUÇLU KEK") {
+    } else if (query == "KREM PEYNIR HAVUCLU KEK") {
       return ListTile(
         title: Text("KREM PEYNİR HAVUÇLU KEK"),
         trailing: Icon(
@@ -130,7 +130,7 @@ class Search extends SearchDelegate {
               context, MaterialPageRoute(builder: (context) => KremPeynirli()));
         },
       );
-    } else if (query == "LİMONLU CHEESECAKE TARİFİ") {
+    } else if (query == "LIMONLU CHEESECAKE TARIFI") {
       return ListTile(
         title: Text("LİMONLU CHEESECAKE TARİFİ"),
         trailing: Icon(
@@ -141,7 +141,7 @@ class Search extends SearchDelegate {
               MaterialPageRoute(builder: (context) => LimonluCheesecake()));
         },
       );
-    } else if (query == "MACARON TARİFİ") {
+    } else if (query == "MACARON TARIFI") {
       return ListTile(
         title: Text("MACARON TARİFİ"),
         trailing: Icon(
@@ -152,7 +152,7 @@ class Search extends SearchDelegate {
               context, MaterialPageRoute(builder: (context) => Macaron()));
         },
       );
-    } else if (query == "MANGOLU PUDİNG TARİFİ") {
+    } else if (query == "MANGOLU PUDING TARIFI") {
       return ListTile(
         title: Text("MANGOLU PUDİNG TARİFİ"),
         trailing: Icon(
@@ -163,7 +163,7 @@ class Search extends SearchDelegate {
               MaterialPageRoute(builder: (context) => MangoluPuding()));
         },
       );
-    } else if (query == "MEYVELİ RULO KEK") {
+    } else if (query == "MEYVELI RULO KEK") {
       return ListTile(
         title: Text("MEYVELİ RULO KEK"),
         trailing: Icon(
@@ -174,7 +174,7 @@ class Search extends SearchDelegate {
               context, MaterialPageRoute(builder: (context) => MeyveliRulo()));
         },
       );
-    } else if (query == "OREO VANİLYALI DONDURMA") {
+    } else if (query == "OREO VANILYALI DONDURMA") {
       return ListTile(
         title: Text("OREO VANİLYALI DONDURMA"),
         trailing: Icon(
@@ -185,7 +185,7 @@ class Search extends SearchDelegate {
               MaterialPageRoute(builder: (context) => OreoluDondurma()));
         },
       );
-    } else if (query == "ORİJİNAL CHEESECAKE TARİFİ") {
+    } else if (query == "ORIJINAL CHEESECAKE TARIFI") {
       return ListTile(
         title: Text("ORİJİNAL CHEESECAKE TARİFİ"),
         trailing: Icon(
@@ -196,7 +196,7 @@ class Search extends SearchDelegate {
               MaterialPageRoute(builder: (context) => OrijinalCheesecake()));
         },
       );
-    } else if (query == "FLUFFY PANCAKE TARİFİ") {
+    } else if (query == "FLUFFY PANCAKE TARIFI") {
       return ListTile(
         title: Text("FLUFFY PANCAKE TARİFİ"),
         trailing: Icon(
@@ -207,7 +207,7 @@ class Search extends SearchDelegate {
               context, MaterialPageRoute(builder: (context) => Pancake()));
         },
       );
-    } else if (query == "SNİCKERDOODLES KURABİYE") {
+    } else if (query == "SNICKERDOODLES KURABIYE") {
       return ListTile(
         title: Text("SNİCKERDOODLES KURABİYE"),
         trailing: Icon(
