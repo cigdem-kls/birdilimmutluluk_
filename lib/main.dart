@@ -1,9 +1,14 @@
 import 'package:birdilimmutluluk/BackgroundImage.dart';
 import 'package:birdilimmutluluk/degerlendirme.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   final pages = [
