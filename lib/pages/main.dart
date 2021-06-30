@@ -1,5 +1,5 @@
-import 'package:birdilimmutluluk/BackgroundImage.dart';
-import 'package:birdilimmutluluk/degerlendirme.dart';
+import 'package:birdilimmutluluk/pages/BackgroundImage.dart';
+import 'package:birdilimmutluluk/pages/degerlendirme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';

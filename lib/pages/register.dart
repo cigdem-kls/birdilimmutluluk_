@@ -1,4 +1,4 @@
-import 'package:birdilimmutluluk/login/login.dart';
+import 'package:birdilimmutluluk/pages/login.dart';
 import 'package:birdilimmutluluk/services/auth_service.dart';
 import 'package:flutter/material.dart';
 

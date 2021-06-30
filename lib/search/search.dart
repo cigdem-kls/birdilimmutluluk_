@@ -1,4 +1,4 @@
-import 'package:birdilimmutluluk/BackgroundImage.dart';
+import 'package:birdilimmutluluk/pages/BackgroundImage.dart';
 import 'package:birdilimmutluluk/tatl%C4%B1lar/Krem-peynirli-havuclu-kek.dart';
 import 'package:birdilimmutluluk/tatl%C4%B1lar/Meyveli-%20rulo-kek.dart';
 import 'package:birdilimmutluluk/tatl%C4%B1lar/Orijinal-cheesecake-tarifi.dart';
