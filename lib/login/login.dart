@@ -1,85 +1,169 @@
 import 'package:birdilimmutluluk/BackgroundImage.dart';
-import 'package:birdilimmutluluk/login/password-input.dart';
-import 'package:birdilimmutluluk/login/rounded-button.dart';
-import 'package:birdilimmutluluk/login/text-input.dart';
+import 'package:birdilimmutluluk/register.dart';
+import 'package:birdilimmutluluk/services/auth_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatefulWidget {
   @override
-  _LoginPage createState() => _LoginPage();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _LoginPage extends State<LoginPage> {
+class _LoginPageState extends State<LoginPage> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  AuthService _authService = AuthService();
+
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      BackgroundImage(),
-      Scaffold(
-        backgroundColor: Colors.black54,
-        body: SingleChildScrollView(
-          child: SafeArea(
-            child: Column(
-              children: [
-                Container(
-                  height: 150,
-                  child: Center(
-                    child: Text(
-                      'ÜYELİK GİRİŞİ',
+    var size = MediaQuery.of(context).size;
+    return Scaffold(
+        body: Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+        child: Container(
+          height: size.height * .5,
+          width: size.width * .85,
+          decoration: BoxDecoration(
+              color: Colors.blue.withOpacity(.75),
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.grey.withOpacity(.75),
+                    blurRadius: 10,
+                    spreadRadius: 2)
+              ]),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextField(
+                      controller: _emailController,
                       style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white),
+                        color: Colors.white,
+                      ),
+                      cursorColor: Colors.white,
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.mail,
+                          color: Colors.white,
+                        ),
+                        hintText: 'E-Mail',
+                        prefixText: ' ',
+                        hintStyle: TextStyle(color: Colors.white),
+                        focusColor: Colors.white,
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Colors.white,
+                        )),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Colors.white,
+                        )),
+                      )),
+                  SizedBox(
+                    height: size.height * 0.02,
+                  ),
+                  TextField(
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                      cursorColor: Colors.white,
+                      controller: _passwordController,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.vpn_key,
+                          color: Colors.white,
+                        ),
+                        hintText: 'Parola',
+                        prefixText: ' ',
+                        hintStyle: TextStyle(
+                          color: Colors.white,
+                        ),
+                        focusColor: Colors.white,
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Colors.white,
+                        )),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Colors.white,
+                        )),
+                      )),
+                  SizedBox(
+                    height: size.height * 0.08,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      _authService
+                          .signIn(
+                              _emailController.text, _passwordController.text)
+                          .then((value) {
+                        return Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BackgroundImage()));
+                      });
+                    },
+                    child: Container(
+                      padding: EdgeInsets.symmetric(vertical: 5),
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.white, width: 2),
+                          //color: colorPrimaryShade,
+                          borderRadius: BorderRadius.all(Radius.circular(30))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Center(
+                            child: Text(
+                          "Giriş yap",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        )),
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 100,
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 40),
-                  child: Column(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          TextInputt(
-                            icon: FontAwesomeIcons.solidEnvelope,
-                            hint: 'Email',
-                            inputType: TextInputType.emailAddress,
-                            inputAction: TextInputAction.next,
-                          ),
-                          PasswordInput(
-                            icon: FontAwesomeIcons.lock,
-                            hint: 'Password',
-                            inputAction: TextInputAction.done,
-                          ),
-                          Text(
-                            'Forgot Password?',
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                        ],
-                      ),
-                      Column(children: [
-                        SizedBox(
-                          height: 100,
-                        ),
-                        RoundedButton(
-                          buttonText: 'Login',
-                        ),
-                      ])
-                    ],
+                  SizedBox(
+                    height: size.height * 0.02,
                   ),
-                )
-              ],
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterPage()));
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          height: 1,
+                          width: 75,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "Kayıt ol",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Container(
+                          height: 1,
+                          width: 75,
+                          color: Colors.white,
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),
       ),
-    ]);
+    ));
   }
 }
