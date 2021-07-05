@@ -1,4 +1,5 @@
 import 'package:birdilimmutluluk/Login/login.dart';
+import 'package:birdilimmutluluk/Sql_%C3%B6rnek/HomePages.dart';
 import 'package:birdilimmutluluk/search/search.dart';
 import 'package:birdilimmutluluk/tatl%C4%B1lar/Krem-peynirli-havuclu-kek.dart';
 import 'package:birdilimmutluluk/tatl%C4%B1lar/Meyveli-%20rulo-kek.dart';
@@ -16,12 +17,12 @@ import 'package:birdilimmutluluk/tatl%C4%B1lar/oreoludondurma.dart';
 import 'package:birdilimmutluluk/tatl%C4%B1lar/pancake-tarifi.dart';
 import 'package:flutter/material.dart';
 
-class BackgroundImage extends StatefulWidget {
+class Home2 extends StatefulWidget {
   @override
-  _BackgroundImage createState() => _BackgroundImage();
+  _Home2 createState() => _Home2();
 }
 
-class _BackgroundImage extends State<BackgroundImage> {
+class _Home2 extends State<Home2> {
   final ScrollController _controllerOne = ScrollController();
   final titleStyle = TextStyle(
     color: Colors.black,
@@ -57,6 +58,15 @@ class _BackgroundImage extends State<BackgroundImage> {
           SizedBox(
             width: 5,
           ),
+          FloatingActionButton(
+              hoverColor: Colors.black12,
+              backgroundColor: Colors.grey[300],
+              child: Icon(
+                Icons.add,
+                color: Colors.white,
+              ),
+              onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Home()))),
           SizedBox(
             width: 5,
           ),

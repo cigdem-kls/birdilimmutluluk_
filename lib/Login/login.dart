@@ -1,3 +1,4 @@
+import 'package:birdilimmutluluk/Login/Home2.dart';
 import 'package:birdilimmutluluk/Login/register.dart';
 import 'package:birdilimmutluluk/Login/services/auth_service.dart';
 import 'package:birdilimmutluluk/pages/BackgroundImage.dart';
@@ -109,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                               return Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => BackgroundImage()));
+                                      builder: (context) => Home2()));
                             });
                           },
                           child: Container(
