@@ -1,6 +1,7 @@
 import 'package:birdilimmutluluk/pages/rating.dart';
+import 'package:birdilimmutluluk/pie_chart/pie_chart_page10.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:like_button/like_button.dart';
 
 class OreoluDondurma extends StatefulWidget {
   @override
@@ -58,9 +59,20 @@ class _OreoluDondurma extends State<OreoluDondurma> {
                                 fontSize: 22, fontWeight: FontWeight.bold),
                           ),
                           Spacer(),
-                          SpinKitPumpingHeart(
-                            color: Colors.red,
-                            size: 40.0,
+                          LikeButton(
+                            size: 40,
+                            countBuilder:
+                                (int count, bool isLiked, String text) {
+                              var color = isLiked ? Colors.red : Colors.grey;
+                              Widget result;
+                              if (count == 0) {
+                                result = Text(
+                                  "love",
+                                  style: TextStyle(color: color),
+                                );
+                              }
+                              return result;
+                            },
                           ),
                           SizedBox(
                             height: 10,
@@ -313,6 +325,7 @@ class _OreoluDondurma extends State<OreoluDondurma> {
                               fontWeight: FontWeight.w300,
                               color: Colors.black87),
                         ),
+                        PieChartSample10(),
                       ],
                     ),
                   ),

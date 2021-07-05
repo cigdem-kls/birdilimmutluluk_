@@ -40,13 +40,22 @@ dependencies:
   firebase_auth: ^1.4.1
   sqflite: ^2.0.0+3
   path: ^1.8.0
+  uuid: ^3.0.4
+
+
 
   cupertino_icons: ^1.0.2
+  http: ^0.13.3
+  image_picker: ^0.6.0+1
+  like_button: ^1.0.1
+  fl_chart:
+  flutter_svg:
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   flutter_launcher_icons: ^0.9.0
 

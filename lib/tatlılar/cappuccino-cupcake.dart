@@ -1,6 +1,8 @@
 import 'package:birdilimmutluluk/pages/rating.dart';
+import 'package:birdilimmutluluk/pie_chart/pie_chart_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:like_button/like_button.dart';
 
 class CappuccinoCupcake extends StatefulWidget {
   @override
@@ -50,7 +52,7 @@ class _CappuccinoCupcake extends State<CappuccinoCupcake> {
                             topLeft: Radius.circular(40),
                             topRight: Radius.circular(40))),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
                         Row(children: <Widget>[
                           Text(
@@ -59,9 +61,23 @@ class _CappuccinoCupcake extends State<CappuccinoCupcake> {
                                 fontSize: 22, fontWeight: FontWeight.bold),
                           ),
                           Spacer(),
-                          SpinKitPumpingHeart(
-                            size: 40.0,
-                            color: Colors.red,
+                          LikeButton(
+                            size: 40,
+                            countBuilder:
+                                (int count, bool isLiked, String text) {
+                              var color = isLiked ? Colors.red : Colors.grey;
+                              Widget result;
+                              if (count == 0) {
+                                result = Text(
+                                  "love",
+                                  style: TextStyle(color: color),
+                                );
+                              }
+                              return result;
+                            },
+                          ),
+                          SizedBox(
+                            height: 10,
                           ),
                         ]),
                         Row(children: <Widget>[
@@ -266,6 +282,7 @@ class _CappuccinoCupcake extends State<CappuccinoCupcake> {
                           style: TextStyle(
                               fontWeight: FontWeight.w300, color: Colors.black),
                         ),
+                        PieChartSample(),
                       ],
                     ),
                   ),

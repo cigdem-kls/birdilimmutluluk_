@@ -1,5 +1,5 @@
-import 'package:birdilimmutluluk/pages/home.dart';
-import 'package:birdilimmutluluk/pages/login.dart';
+import 'package:birdilimmutluluk/Login/login.dart';
+import 'package:birdilimmutluluk/Sql_%C3%B6rnek/HomePages.dart';
 import 'package:birdilimmutluluk/search/search.dart';
 import 'package:birdilimmutluluk/tatl%C4%B1lar/Krem-peynirli-havuclu-kek.dart';
 import 'package:birdilimmutluluk/tatl%C4%B1lar/Meyveli-%20rulo-kek.dart';
@@ -67,6 +67,9 @@ class _BackgroundImage extends State<BackgroundImage> {
               ),
               onPressed: () => Navigator.push(
                   context, MaterialPageRoute(builder: (context) => Home()))),
+          SizedBox(
+            width: 5,
+          ),
         ]),
         body: Container(
             decoration: BoxDecoration(

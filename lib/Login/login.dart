@@ -1,6 +1,6 @@
+import 'package:birdilimmutluluk/Login/register.dart';
+import 'package:birdilimmutluluk/Login/services/auth_service.dart';
 import 'package:birdilimmutluluk/pages/BackgroundImage.dart';
-import 'package:birdilimmutluluk/pages/register.dart';
-import 'package:birdilimmutluluk/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -28,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: size.height * .5,
                 width: size.width * .85,
                 decoration: BoxDecoration(
-                    color: Colors.black87,
+                    color: Colors.black45,
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                     boxShadow: [
                       BoxShadow(
