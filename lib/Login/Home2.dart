@@ -1,5 +1,3 @@
-import 'package:birdilimmutluluk/Login/login.dart';
-import 'package:birdilimmutluluk/Sql_%C3%B6rnek/HomePages.dart';
 import 'package:birdilimmutluluk/search/search.dart';
 import 'package:birdilimmutluluk/tatl%C4%B1lar/Krem-peynirli-havuclu-kek.dart';
 import 'package:birdilimmutluluk/tatl%C4%B1lar/Meyveli-%20rulo-kek.dart';
@@ -34,15 +32,6 @@ class _Home2 extends State<Home2> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(backgroundColor: Colors.grey[300], actions: <Widget>[
-          FloatingActionButton(
-              hoverColor: Colors.black12,
-              backgroundColor: Colors.grey[300],
-              child: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-              onPressed: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => LoginPage()))),
           SizedBox(
             width: 5,
           ),
@@ -66,7 +55,7 @@ class _Home2 extends State<Home2> {
                 color: Colors.white,
               ),
               onPressed: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Home()))),
+                  context, MaterialPageRoute(builder: (context) => Home2()))),
           SizedBox(
             width: 5,
           ),

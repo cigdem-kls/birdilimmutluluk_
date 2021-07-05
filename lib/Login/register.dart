@@ -1,4 +1,4 @@
-import 'package:birdilimmutluluk/Login/login.dart';
+import 'package:birdilimmutluluk/Login/Home2.dart';
 import 'package:birdilimmutluluk/Login/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -170,7 +170,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 return Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => LoginPage()));
+                                        builder: (context) => Home2()));
                               });
                             },
                             child: Container(
